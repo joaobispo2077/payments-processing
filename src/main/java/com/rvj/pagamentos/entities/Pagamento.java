@@ -7,8 +7,8 @@ public class Pagamento {
     private String registro;
 
     public Pagamento(String arquivoString) {
-        this.banco = arquivoString.substring(0, 2);
-        this.lote = arquivoString.substring(3, 6);
+        this.banco = arquivoString.substring(0,3);
+        this.lote = arquivoString.substring(3, 7);
         this.registro = arquivoString.substring(7);
     }
 
