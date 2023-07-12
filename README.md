@@ -26,6 +26,15 @@ Projeto para a leitura de arquivo posicional e realizar validações.
 
 Para realizar setup dessa aplicação, siga os passos nesse [link](setup.md).
 
+
+#### RabbitMQ
+
+Para subir um RabbitMQ com Docker run, use algo como o comando abaixo:
+
+```bash
+docker run -d --hostname localhost --name smallrye-rabbitmq -e RABBITMQ_DEFAULT_USER=user -e RABBITMQ_DEFAULT_PASS=password -p 5672:5672 rabbitmq:3
+```
+
 ## Prioridade
 
 1. Fazer funcionar
