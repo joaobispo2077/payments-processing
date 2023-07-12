@@ -6,10 +6,10 @@ Projeto para a leitura de arquivo posicional e realizar validações.
 
 ## MVP - Tarefas
 
-- [] Criar um repositório no GitHub
-- [] Fundar o projeto do Quarkus
-- [] Criar endpoint de API REST GET para retornar fatia da string posicional
-- [] Criar endpoint de API REST para receber arquivo posicional
+- [X] Criar um repositório no GitHub
+- [X] Fundar o projeto do Quarkus
+- [X] Criar endpoint de API REST GET para retornar fatia da string posicional
+- [X] Criar endpoint de API REST para receber arquivo posicional
 - [] Ler arquivo posicional 
 - [] Validar arquivo posicional 
 - [] Fazer um exemplo de publicar mensagem em fila MQ
