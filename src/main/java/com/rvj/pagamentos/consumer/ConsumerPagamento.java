@@ -1,17 +1,26 @@
 package com.rvj.pagamentos.consumer;
 
-import com.rvj.pagamentos.entities.Pagamento;
-import io.quarkus.logging.Log;
+import io.vertx.core.json.JsonObject;
 import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.inject.Inject;
+
 import org.eclipse.microprofile.reactive.messaging.Incoming;
-import org.eclipse.microprofile.reactive.messaging.Message;
+import org.jboss.logging.Logger;
 
 @ApplicationScoped
 public class ConsumerPagamento {
 
+    @Inject
+    Logger log;
 
-    @Incoming("pagamento")
-    public void process(Message<Pagamento> pagamento) {
-        Log.info(pagamento.getPayload().toString());
+    @Incoming("abc")
+    public void process(JsonObject pagamento) {
+        log.info("================================");
+        System.out.println("######ConsumerPagamento.process");
+        System.out.println("@@@@@@@@@@@@@@@@@@");
+        System.out.println(pagamento.toString());
+        log.info("================================");
+        System.out.println("@@@@@@@@@@@@@@@@@@");
+        log.info("================================");
     }
 }
