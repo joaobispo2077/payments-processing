@@ -30,7 +30,8 @@ public class PagamentosResource {
 
         pagamentoEmitter.send(pagamento);
         loteEmitter.send(pagamento.getLote());
-
+        System.out.println("#################");
+        System.out.println(pagamento.getBanco());
         return Response.ok().build();
     }
 
