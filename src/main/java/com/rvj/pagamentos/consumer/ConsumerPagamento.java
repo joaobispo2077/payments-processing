@@ -13,7 +13,7 @@ public class ConsumerPagamento {
     @Inject
     Logger log;
 
-    @Incoming("abc")
+    @Incoming("requests")
     public void process(JsonObject pagamento) {
         log.info("================================");
         System.out.println("######ConsumerPagamento.process");
