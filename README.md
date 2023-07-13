@@ -11,6 +11,7 @@ Projeto para a leitura de arquivo posicional e realizar validações.
 - [X] Criar endpoint de API REST GET para retornar fatia da string posicional
 - [X] Criar endpoint de API REST para receber arquivo posicional
 - [X] Ler arquivo posicional 
+- [] Estruturar para usar DDD
 - [] Validar arquivo posicional 
 - [X] Fazer um exemplo de publicar mensagem em fila MQ
 - [X] Refator para Receber/Enviar mensagem para fila MQ
