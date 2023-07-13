@@ -10,10 +10,10 @@ Projeto para a leitura de arquivo posicional e realizar validações.
 - [X] Fundar o projeto do Quarkus
 - [X] Criar endpoint de API REST GET para retornar fatia da string posicional
 - [X] Criar endpoint de API REST para receber arquivo posicional
-- [] Ler arquivo posicional 
+- [X] Ler arquivo posicional 
 - [] Validar arquivo posicional 
-- [] Fazer um exemplo de publicar mensagem em fila MQ
-- [] Refator para Receber/Enviar (?) mensagem para fila MQ
+- [X] Fazer um exemplo de publicar mensagem em fila MQ
+- [X] Refator para Receber/Enviar mensagem para fila MQ
 
 ## Tecnologias e Metodologias
 
