@@ -1,7 +1,9 @@
 package com.rvj.pagamentos.rest;
 
+import com.rvj.pagamentos.entities.Controle;
 import com.rvj.pagamentos.entities.Pagamento;
 
+import com.rvj.pagamentos.entities.Servico;
 import jakarta.ws.rs.Consumes;
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;
@@ -20,19 +22,15 @@ public class PagamentosResource {
     @Channel("pagamento")
     Emitter<Pagamento> pagamentoEmitter;
 
-    @Channel("lote")
-    Emitter<String> loteEmitter;
-
     @GET
     public Response getPagamento(@QueryParam("arquivo") String arquivo) {
 
-        Pagamento pagamento = new Pagamento(arquivo);
+        Controle controle = new Controle(arquivo);
+        Servico servico = new Servico(arquivo);
+        Pagamento pagamento = new Pagamento(controle, servico);
 
         pagamentoEmitter.send(pagamento);
-        loteEmitter.send(pagamento.getLote());
-        System.out.println("#################");
-        System.out.println(pagamento.getBanco());
-        return Response.ok().build();
+        return Response.ok(pagamento).build();
     }
 
 }

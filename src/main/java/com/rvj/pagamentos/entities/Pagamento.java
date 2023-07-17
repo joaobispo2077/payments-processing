@@ -2,38 +2,35 @@ package com.rvj.pagamentos.entities;
 
 public class Pagamento {
 
-    private String banco;
-    private String lote;
-    private String registro;
+    private Controle controle;
+    private Servico servico;
 
-    public Pagamento(String arquivoString) {
-        this.banco = arquivoString.substring(0,3);
-        this.lote = arquivoString.substring(3, 7);
-        this.registro = arquivoString.substring(7);
+    public Pagamento(Controle controle, Servico servico) {
+        this.controle = controle;
+        this.servico = servico;
     }
 
-    public String getBanco() {
-        return this.banco;
+    public Controle getControle() {
+        return controle;
     }
 
-    public void setBanco(String banco) {
-        this.banco = banco;
+    public void setControle(Controle controle) {
+        this.controle = controle;
     }
 
-    public String getLote() {
-        return this.lote;
+    public Servico getServico() {
+        return servico;
     }
 
-    public void setLote(String lote) {
-        this.lote = lote;
+    public void setServico(Servico servico) {
+        this.servico = servico;
     }
 
-    public String getRegistro() {
-        return this.registro;
+    @Override
+    public String toString() {
+        return "Pagamento{" +
+                "controle=" + controle +
+                ", servico=" + servico +
+                '}';
     }
-
-    public void setRegistro(String registro) {
-        this.registro = registro;
-    }
-    
 }

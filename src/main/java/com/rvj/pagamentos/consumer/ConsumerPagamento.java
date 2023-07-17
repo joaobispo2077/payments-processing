@@ -16,11 +16,7 @@ public class ConsumerPagamento {
     @Incoming("requests")
     public void process(JsonObject pagamento) {
         log.info("================================");
-        System.out.println("######ConsumerPagamento.process");
-        System.out.println("@@@@@@@@@@@@@@@@@@");
         System.out.println(pagamento.toString());
-        log.info("================================");
-        System.out.println("@@@@@@@@@@@@@@@@@@");
         log.info("================================");
     }
 }
